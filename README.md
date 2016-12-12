@@ -2,7 +2,7 @@
 
 ```
 vue register login
-基于vue2全家桶 简单的登录注册
+基于vue2全家桶登录注册
 ```
 ## 环境依赖模块
 ```
@@ -17,7 +17,7 @@ jsonwebtoken
 ```
 ## 页面说明
 ```
-/                     // 首页，不需要登录可以访问
+/home                 // 首页，不需要登录可以访问
 /person               // 个人页，需要登录后可以访问
 /login                // 登录，不需要登录可以访问，登录后不可以访问
 /reg                  // 注册，不需要登录可以访问，登录后不可以访问
@@ -31,5 +31,5 @@ npm install
 mongod --dbpath
 node app
 npm run dev
-http://localhost:3000/
+http://localhost:8080/
 ```
