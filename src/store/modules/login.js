@@ -13,7 +13,7 @@ var isLoggedIn = function() {
 };
 
 const state = {
-  token: isLoggedIn || null
+  token: isLoggedIn() || null
 };
 
 const mutations = {
