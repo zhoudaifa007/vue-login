@@ -25,19 +25,7 @@ app.all('*', function(req, res, next) {
   next();
 });
 
-var auth = function(req, res, next) {
-  var authJwt = expressJwt({
-    secret: process.env.JWT_SECRET
-  });
-  var bearerToken;
-  var bearerHeader = req.headers["authorization"];
-  if (typeof bearerHeader !== 'undefined' && authJwt) {
-    var bearer = bearerHeader.split(" ");
-    bearerToken = bearer[1];
-    req.token = bearerToken;
-    next();
-  }
-};
+var auth = expressJwt({ secret: process.env.JWT_SECRET });
 
 app.post('/api/login', function(req, res) {
   User.findOne({name: req.body.name, password: req.body.password}, function(err, user) {
