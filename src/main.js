@@ -52,7 +52,7 @@ router.beforeEach(({meta, path}, from, next) => {
 });
 
 var app = new Vue({
-  el: '#app',
+  el: '#vapp',
   router,
   store,
   ...App,
