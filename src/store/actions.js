@@ -3,15 +3,9 @@ import { USER_SIGNIN,USER_SIGNOUT,USER_REG } from './types'
 
 export const UserLogin = ({ commit }, data) => {
   api.localLogin(data).then(function (response) {
-    if( response.code == 200) {
-      commit(USER_SIGNIN, response.result);
-      window.location = '/person'
-    }else{
-      window.location = '/login'
-    }
+    alert(JSON.stringify(response.data));
   })
   .catch(function (error) {
-    debugger;
     console.log(error);
   });
 };
