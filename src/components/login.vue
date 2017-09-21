@@ -7,7 +7,7 @@
           <div class="col-xs-12">
             <div class="control-wrapper">
               <label for="username" class="control-label fa-label"><i class="fa fa-user fa-medium"></i></label>
-              <input type="text" class="form-control" id="username" placeholder="用户名" v-model="user.name">
+              <input type="text" class="form-control" id="username" placeholder="用户名" v-model="user.account">
             </div>
           </div>
         </div>
@@ -36,7 +36,7 @@
     data (){
       return {
         user: {
-          name: '',
+          account: '',
           password: ''
         }
       }

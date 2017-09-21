@@ -11,7 +11,7 @@ if(localStorage.getItem('user')) {
 
 export default {
   localLogin: function (data) {
-    return Vue.axios.post('/api/login',data)
+    return Vue.axios.post('http://localhost:80/api/login',data)
   },
   localLogout: function (data) {
     return instance.post('/api/logout',data)
