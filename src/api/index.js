@@ -14,7 +14,7 @@ export default {
     return Vue.axios.post('http://localhost:80/api/login',data)
   },
   localLogout: function (data) {
-    return instance.post('/api/logout',data)
+    return instance.post('http://localhost:80/api/logout',data)
   },
   localReg: function (data) {
     return Vue.axios.post('/api/reg',data)
