@@ -25,7 +25,7 @@
     },
     methods:{
       logout(){
-        this.$store.dispatch('UserLogout');
+        this.$store.dispatch('UserLogout',this.UserInfo);
       }
     }
   }
