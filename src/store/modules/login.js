@@ -1,4 +1,4 @@
-import { USER_SIGNIN,USER_SIGNOUT,USER_REG } from '../types'
+import { USER_SIGNIN,USER_SIGNOUT,USER_REG,USER_MARKMSG } from '../types'
 
 var isLoggedIn = function() {
   var token = localStorage.getItem('user');
@@ -10,7 +10,8 @@ var isLoggedIn = function() {
 };
 
 const state = {
-  token: isLoggedIn() || null
+  token: isLoggedIn() || null,
+  markMsg: null
 };
 
 const mutations = {
@@ -18,10 +19,15 @@ const mutations = {
     localStorage.setItem('user',JSON.stringify(user));
     state.token = user
   },
+  [USER_MARKMSG](state,msg) {
+    state.markMsg = msg
+  },
+
   [USER_SIGNOUT](state) {
     localStorage.removeItem('user');
     state.token = null;
   },
+
   [USER_REG](state, user) {
     localStorage.setItem('user',JSON.stringify(user));
     state.token = user
